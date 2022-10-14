@@ -117,5 +117,21 @@ fn main() {
     println!("Trivalent Chromium: 1.2 - 2.6 grams/Liter, use IZ-264T to adjust, filtered sample before testing");
     println!("Cobalt: 2.0 - 4.0 grams/Liter, use IZ-264 to adjust");
     println!("Trace metals: Cr6+ <1 mg/L, Zn <5 g/L, Cu < 3 mg/L, Nickel < 20 mg/L, Fe < 100 mg/L");
+
+    println!("Chemical Cost");
+    println!("Dipsol IZ-C17+ Zinc-Nickel Component Pricing: ");
+    println!("Dipsol IZ-C17+MS: $65.00 per gal");
+    println!("Dipsol IZ-C17+Ni: $103.50 per gal");
+    println!("Dipsol IZ-C17+B: $167.00 per gal");
+    println!("Dipsol NZ-777: $21.66 per gal");
+    println!("Dipsol F-0529: $42.00 per gal");
+
+    println!("Dipsol IZ-264 Trivalent Passivate Component Pricing: ");
+    println!("Dipsol IZ-264: $47.00 per gal");
+    println!("Dipsol IZ-264-T: $47.00 per gal");
+
+    println!("Cost for Dipsol IZ-C17+ is: ");
+    println!("Cost for Dipsol IZ-264 is: ");
 }
+
 
