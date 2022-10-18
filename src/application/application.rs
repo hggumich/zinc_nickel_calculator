@@ -1,5 +1,4 @@
-pub fn application () {
-
+pub fn application() {
     println!("Application of Dispol IZ-C17 with Dispol IZ-264 is as follows: ");
     println!("Step 1: Degrease - Solvent Clean to remove grease and oil");
     println!("Step 2: Pre Plate Stress Relief - bake for 5 - 10 hours at 375 F");

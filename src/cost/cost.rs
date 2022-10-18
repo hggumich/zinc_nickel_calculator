@@ -1,5 +1,4 @@
 pub fn cost() {
-
     println!("Chemical Cost");
     println!("Dipsol IZ-C17+ Zinc-Nickel Component Pricing: ");
     println!("Dipsol IZ-C17+MS: $65.00 per gal");
