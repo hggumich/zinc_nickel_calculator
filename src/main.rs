@@ -1,4 +1,9 @@
 use std::io;
+mod specification;
+mod contact;
+mod quality;
+mod maintenance;
+mod equipment;
 
 fn main() {
     loop {
@@ -10,7 +15,7 @@ fn main() {
         let user_value: i32 = user_value.trim().parse().expect("Please type a number!");
 
         if user_value == 9 {
-            specification_function();
+            specification::usaf_201027456::info_spec_print();
         } else if user_value == 1 {
             get_tank_dimension_function();
         } else if user_value == 2 {
@@ -18,82 +23,13 @@ fn main() {
         } else if user_value == 3 {
             display_application_function();
         } else if user_value == 4 {
-            println!("Dispol of America");
-            println!("34005 Schoolcraft St, Livonia, Mi 48150");
-            println!("phone: 734-261-0633");
-            println!("website: https://www.dipsolamerica.com/");
-            println!("Contacts: ");
-            println!("Chris Kolar");
-            println!("Title: Technical Service Representative");
-            println!("email: ckolar@dipsolamerica.com");
-            println!("phone: 734-812-1021");
-            println!("John Szczypka");
-            println!("Title: NA Sales Manager");
-            println!("email: JSzczypka@dipsolamerica.com");
-            println!("phone: 734-261-0633");
-            println!("Brenntag Mid-South, Inc");
-            println!("website: https://www.brenntagmid-south.com");
-            println!("Contact: ");
-            println!("Tammy Hoang");
-            println!("Title: Account Manager - Durham District");
-            println!("email: thoang@brenntag.com");
-            println!("phone: 270-832-5292");
+            contact::contact::contact();
         } else if user_value == 5 {
-            println!("Quality Assurance Provisions");
-            println!("Required Tests are as followed: ");
-            println!("Thickness - test shall be in accordance with ASTM B568, ASTM E376, or method acceptable to purchaser");
-            println!("Adhesion - bend test until rupture");
-            println!("Finish Quality - visual examination");
-            println!("Composition - shall be determined by X-Ray Fluorescence on production parts");
-            println!("Corrosion Resistance - ASTM B117 for 96 hours");
-            println!("Hydrogen Embrittlement - ASTM F519 and photomicrographs");
-            println!("Processing bath chemistry - weekly testing");
-            println!("Paint Adhesion - 14 days air dry and then dry and wet paint adhesion test");
-            println!("Quality Inspection Criteria");
-            println!("Finish Quality, thickness, and composition shall be performed on every lot");
-            println!("Finish Quality: on every part");
-            println!("Thickness: based on sampling plan");
-            println!("Composition: based on sampling plan");
+            quality::quality::quality();
         } else if user_value == 6 {
-            println!("Equipment Requirements are as follows: ");
-            println!("Tanks - non-metallic such as PVC, CPVC, or polyethylene");
-            println!("Anodes - Nickel 200 anodes have 99.0% nickel");
-            println!("Pumps/Filtration - pump at least 3X turnover per hour, filter elements rated at 20 - 50 micrometers");
-            println!("Carbon Treatment - treatment external to plating tank");
-            println!("Carbonate Removal -  cooling equipment to precipitate the carbonates");
-            println!("Toshi Cell - 500 ml Toshi Cell");
-            println!("Amp-Hour Meter - total accumulated amp-hours to determine additions");
-            println!("Do not use air agitation due to it will cause rapid rise in carbonates");
+            equipment::equipment::equipment();
         } else if user_value == 7 {
-            println!("Solution Maintenance are as follows: ");
-            println!("Solution operation is less than 85 F");
-            println!("300 grams per liter of IZ-C17+MS");
-            println!("130 grams per liter of Sodium Hydroxide");
-            println!("10 milliliters per liter of IZ-C17+B");
-            println!("Component Concentrations should be as follows: ");
-            println!("Sodium Hydroxide: 120 - 140 grams/Liter");
-            println!("Zinc: 6 - 10 grams/Liter");
-            println!("Nickel: 1.7 - 2.3 grams/Liter");
-            println!("Addjustment of F-0529 should be as follows: ");
-            println!("Toshi cell test");
-            println!("500 milliliters sample with 2 milliliters of F-0529");
-            println!("plate a toshi cell at 4 amps for 20 mintues at 68 -83 F");
-            println!("plate a toshi cell as above with a sample as is");
-            println!("compare cells and adjust at 4 milliliters of F-0529 per liter");
-            println!("cell shall be 0.45 to 0.53 mils at 1 cm from high current density edge with 14.5 to 16.0 % nickel");
-            println!("cell shall be 0.20 to 0.28 mils at 5 cm from high current density edge with 14.5 to 16.0 % nickel");
-            println!("if nickel concentration is low, add IZ-C17+Ni");
-            println!("if thickness is too thick, stop sodium hydroxide or zinc additions or reduce the plating bath temperature");
-            println!("if thickness is too thin, increase zinc or sodium hydroxide or increase temperature of the plating bath");
-            println!("deposit is acceptable if nickel is between 12 to 18 %");
-            println!("Trivalent Chromium Conversion Coating Solution");
-            println!("pH: 4.0 to 4.4, use sodium hydroxide or nitric acid as required");
-            println!("temperature: 73 to 86 F");
-            println!("Trivalent Chromium: 1.2 - 2.6 grams/Liter, use IZ-264T to adjust, filtered sample before testing");
-            println!("Cobalt: 2.0 - 4.0 grams/Liter, use IZ-264 to adjust");
-            println!(
-            "Trace metals: Cr6+ <1 mg/L, Zn <5 g/L, Cu < 3 mg/L, Nickel < 20 mg/L, Fe < 100 mg/L"
-        );
+            maintenance::maintenance::maintenance();
         } else if user_value == 8 {
             cost_function();
         } else {
@@ -130,13 +66,6 @@ fn cost_function() {
     println!("Cost for Dipsol IZ-264 is: ");
 }
 
-fn specification_function() {
-    println!("Product used are as follows:");
-    println!("Zinc-Nickel Plating Solution: Dispol IZ-C17");
-    println!("Trivalent Chromate Conversion Coating: Dispol IZ-264");
-    println!("These two products are good for the following specifications:");
-    println!("AMS 2417, BAC 5637, MIL-PRF-32660, U.S. Air Force 201027456");
-}
 
 fn get_tank_dimension_function() {
     println!("\nPlease enter height dimension in inches of the tank: ");
