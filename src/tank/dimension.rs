@@ -1,17 +1,24 @@
 pub fn dimension() {
 
-    struct TankSize {
+    struct tank_size {
         width: f32,
         height: f32,
         depth: f32,
     }
+
+    impl tank_size {
+        fn print_info(&self){
+            println!("Tank volume is {}", self.width*self.height*self*depth);
+        }
+    }
+
 
     println!("\nPlease enter height dimension in inches of the tank: ");
     let mut tank_height = String::new();
     std::io::stdin()
         .read_line(&mut tank_height)
         .expect("Failed to read line");
-    let TankSize::Height() = tank_height.trim().parse().expect("Please type a number!");
+    let TankSize::height = tank_height.trim().parse().expect("Please type a number!");
 
     println!("Please enter width dimension in inches of the tank: ");
     let mut tank_width = String::new();
@@ -34,11 +41,11 @@ pub fn dimension() {
         .expect("Failed to read line");
     let tank_depth: f32 = tank_depth.trim().parse().expect("Please type a number!");
 
-    let full_volume: f32 = TankSize::Height * tank_width * tank_length * 0.004329;
-    let less_volume: f32 = (TankSize::Height - tank_depth) * tank_width * tank_length * 0.004329;
+    let full_volume: f32 = TankSize::height * tank_width * tank_length * 0.004329;
+    let less_volume: f32 = (TankSize::height - tank_depth) * tank_width * tank_length * 0.004329;
     let fill_volume: f32 = full_volume - less_volume;
 
-    println!("{}, {}, {}", TankSize::Height, tank_length, tank_width);
+    println!("{}, {}, {}", TankSize::height, tank_length, tank_width);
     println!(
         "Total Tank Capacity volume is {} gallons ",
         full_volume.floor()
