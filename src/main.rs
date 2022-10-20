@@ -1,4 +1,3 @@
-use std::io;
 mod application;
 mod contact;
 mod cost;
@@ -6,49 +5,37 @@ mod equipment;
 mod intro;
 mod maintenance;
 mod makeup;
+mod print;
 mod quality;
+mod readline;
 mod specification;
 mod tank;
 
 fn main() {
+    let mut volume: f32 = 0.0;
     loop {
         intro::intro::intro();
-        let mut user_value = String::new();
-        io::stdin()
-            .read_line(&mut user_value)
-            .expect("Failed to read line.");
-        let user_value: i32 = user_value.trim().parse().expect("Please type a number!");
+        let user_value = readline::readline::read_line_int();
 
-        if user_value == 9 {
-            specification::usaf_201027456::info_spec_print();
-        } else if user_value == 1 {
-            tank::dimension::dimension();
-        } else if user_value == 2 {
-            makeup::makeup::makeup();
-        } else if user_value == 3 {
-            application::application::application();
-        } else if user_value == 4 {
-            contact::contact::contact();
-        } else if user_value == 5 {
-            quality::quality::quality();
-        } else if user_value == 6 {
-            equipment::equipment::equipment();
-        } else if user_value == 7 {
-            maintenance::maintenance::maintenance();
-        } else if user_value == 8 {
-            cost::cost::cost();
-        } else {
-            println!("You entered an invalid respond.");
+        match user_value {
+            1 => volume = tank::dimension::dimension(),
+            2 => makeup::makeup::makeup(volume),
+            3 => application::application::application(),
+            4 => contact::contact::contact(),
+            5 => quality::quality::quality(),
+            6 => equipment::equipment::equipment(),
+            7 => maintenance::maintenance::maintenance(),
+            8 => cost::cost::cost(),
+            9 => specification::usaf_201027456::info_spec_print(),
+            10 => print::print::print_pdf(),
+            _ => println!("Invalid value entered!"),
         }
+
         println!(
             "\nDo you want to review another selection for plating Zn-Ni: Y for yes and N for no"
         );
-        let mut user_continue = String::new();
-        io::stdin()
-            .read_line(&mut user_continue)
-            .expect("Failed to read line.");
-        let user_continue = user_continue.trim();
-        if user_continue == "N" {
+        let user_continue = readline::readline::read_line_string();
+        if user_continue == "N" || user_continue == "n" {
             break println!("Thanks for using the app, Bye");
         }
     }

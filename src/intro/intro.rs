@@ -12,4 +12,5 @@ pub fn intro() {
     println!("Enter 7 to see Maintance Requirements");
     println!("Enter 8 to see cost of chemicals");
     println!("Enter 9 to see met specifications");
+    println!("Enter 10 to print a summary report");
 }
