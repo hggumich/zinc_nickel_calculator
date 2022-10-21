@@ -9,7 +9,9 @@ pub fn application() {
     println!("Step 7: Inspect - water-break free surface");
     println!("Step 8: Acid Activate - immerse part in 0.1% HCl for 30 seconds max or until gassing observed");
     println!("Step 9: Rinse - water rinse for minimum of 90 seconds");
-    println!("Step 10: Plating - plate at 28 - 56 ASF for 25 minutes to produce 0.3 - 0.6 mils at 68 - 78 F");
+    println!("Step 10a: Strike - plate at 75 - 85 ASF for 50 - 70 seconds");
+    println!("Step 10b: Plating - plate at 40 - 60 ASF for 25 minutes to produce 0.3 - 0.6 mils at 68 - 78 F");
+    println!("Step 10c: Cathode current density is 40 - 60 asf and anode current density is > 74 asf");
     println!("Step 11: Rinse - water rinse for minimum of 90 seconds");
     println!("Step 12: Demask - keep product wet");
     println!("Step 13: Rinse - water rinse for minimum of 30 seconds");

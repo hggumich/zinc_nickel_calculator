@@ -19,4 +19,10 @@ pub fn contact() {
     println!("Title: Account Manager - Durham District");
     println!("email: thoang@brenntag.com");
     println!("phone: 270-832-5292");
+    println!("Fischer Technology, Inc");
+    println!("www.fischer-technology.com");
+    println!("Bill Brecher");
+    println!("Title: Sales Engineer");
+    println!("email: bBrecher@fischer-technology.com");
+    println!("phone: 860-249-6908");
 }

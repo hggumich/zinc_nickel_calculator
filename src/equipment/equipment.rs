@@ -8,4 +8,6 @@ pub fn equipment() {
     println!("Toshi Cell - 500 ml Toshi Cell");
     println!("Amp-Hour Meter - total accumulated amp-hours to determine additions");
     println!("Do not use air agitation due to it will cause rapid rise in carbonates");
+    println!("Fluke 377 Clamp Meter: $ 750");
+    println!("Fischer Technology - Benchtop XRF: $ 28,000");
 }
