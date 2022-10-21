@@ -10,6 +10,7 @@ pub mod quality;
 pub mod readline;
 pub mod specification;
 pub mod tank;
+pub mod project_cost;
 
 fn main() {
     let mut volume: f32 = 0.0;
@@ -39,4 +40,5 @@ fn main() {
             break println!("Thanks for using the app, Bye");
         }
     }
+    project_cost::cost::cost();
 }
