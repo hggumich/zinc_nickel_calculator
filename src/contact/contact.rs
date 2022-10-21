@@ -1,20 +1,56 @@
+struct Contact {
+    company: String,
+    website: String,
+    name: String,
+    title: String,
+    phone: String,
+    email: String,
+    street_address: String,
+    state: String,
+    zip_code: i32,
+}
+
 pub fn contact() {
-    println!("Dispol of America");
-    println!("34005 Schoolcraft St, Livonia, Mi 48150");
-    println!("phone: 734-261-0633");
-    println!("website: https://www.dipsolamerica.com/");
-    println!("Contacts: ");
-    println!("Chris Kolar");
-    println!("Title: Technical Service Representative");
-    println!("email: ckolar@dipsolamerica.com");
-    println!("phone: 734-812-1021");
-    println!("John Szczypka");
-    println!("Title: NA Sales Manager");
-    println!("email: JSzczypka@dipsolamerica.com");
-    println!("phone: 734-261-0633");
-    println!("Brenntag Mid-South, Inc");
-    println!("website: https://www.brenntagmid-south.com");
-    println!("Contact: ");
+
+    let contact1 = Contact {
+        company: String::from("Dispol of America"),
+        website: ,
+        name: String::from("Chris Kolar"),
+        title: String::from("Technical Service Representative"),
+        phone: String::from("734-261-0633"),
+        email: String::from("ckolar@dipsolamerica.com"),
+        street_address: String::from("34005 Schoolcraft St"),
+        state: String::from("Mi"),
+        zip_code: 48150,
+    }
+
+
+    let contact2 = Contact {
+        company: String::from("Dispol of America"),
+        website: ,
+        name: String::from("John Szczypka"),
+        title: String::from("NA Sales Manager"),
+        phone: String::from("734-261-0633"),
+        email: String::from("JSzczypka@dipsolamerica.com"),
+        street_address: String::from("34005 Schoolcraft St"),
+        state: String::from("Mi"),
+        zip_code: 48150,
+    }
+    
+    
+    let contact3 = Contact {
+        company: String::from("Brenntag Mid-South, Inc"),
+        website: String::from("website: https://www.brenntagmid-south.com"),
+        name: String::from("Tammy Hoang"),
+        title: String::from("Account Manager - Durham District"),
+        phone: String::from("270-832-5292"),
+        email: String::from("ckolar@dipsolamerica.com"),
+        street_address: String::from("34005 Schoolcraft St"),
+        state: String::from("Mi"),
+        zip_code: 48150,
+    }
+
+
     println!("Tammy Hoang");
     println!("Title: Account Manager - Durham District");
     println!("email: thoang@brenntag.com");
