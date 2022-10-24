@@ -6,11 +6,11 @@ pub mod intro;
 pub mod maintenance;
 pub mod makeup;
 pub mod print;
+pub mod project_cost;
 pub mod quality;
 pub mod readline;
 pub mod specification;
 pub mod tank;
-pub mod project_cost;
 
 fn main() {
     let mut volume: f32 = 0.0;

@@ -11,7 +11,9 @@ pub fn info_spec_print() {
     println!("Mil-STD-865 - Selective, Brush Plating, Electro Deposition");
     println!("Mil-STD-1916 - DOD Preferred Methods for Acceptance of Product");
     println!("AMS 2451/9 - Plating, Brush, Zinc-Nickel Low Hydrogen Embrittlement");
-    println!("ASTM F519 - Hydrogen Embrittlement Evaluation of Plating Processes & Service Environments");
+    println!(
+        "ASTM F519 - Hydrogen Embrittlement Evaluation of Plating Processes & Service Environments"
+    );
     println!("ASTM B160 - Standard Specification for Nickel Rod and Bar");
     println!("ASTM D1193 - Standard Specification for Reagent Water");
     println!("ASTM B117 - Standard Practice for Operating Salt Spray Apparatus");
